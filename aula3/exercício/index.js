@@ -1,0 +1,1 @@
+console.log('Menu nome é "Cleverson". Estou aprendendo JavaScript às', 0, 'da madrugada.');
