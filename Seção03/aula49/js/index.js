@@ -1,4 +1,7 @@
 /*
+  DIFERENÇAS ENTRE VAR E LET
+
+
   - Aula 19
 
   - Quando crio uma variável utilizando var, caso utilize o mesmo nome de variável logo abaixo,
