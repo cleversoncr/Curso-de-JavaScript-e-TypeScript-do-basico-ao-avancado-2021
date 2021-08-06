@@ -6,7 +6,7 @@ function rand(min = 1000, max = 3000) {
 }
 
 function f1(callback) {
-  setTimeout(function () {
+  setTimeout(function () { // setTimeout -> simula um serviço web
     console.log('f1');
     if (callback) callback();
   }, rand());
