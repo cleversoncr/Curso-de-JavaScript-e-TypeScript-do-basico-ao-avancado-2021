@@ -1,88 +1,38 @@
-//Funções geradoras
 
-// function* geradora1() {
-//   // Código qualquer ...
-//   yield 'Valor 1';
-//   // Código qualquer ...
-//   yield 'Valor 2';
-//   // Código qualquer ...
-//   yield 'Valor 3';
-// }
+//                 0         1        2
+// const nomes = ['Eduardo', 'Maria', 'Joana'];
+// nomes[2] = 'João';
+// delete nomes[2];
+// console.log(nomes);
 
-// const g1 = geradora1();
-// // console.log(g1.next().value);
-// // console.log(g1.next().value);
-// // console.log(g1.next().value);
-// for (let valor of g1) {
-//   console.log(valor);
-// }
+// const nomes = new Array('Eduardo', 'Maria', 'Joana');
+// nomes[2] = 'João';
+// delete nomes[2];
+// console.log(nomes);
 
+// const nomes = ['Eduardo', 'Maria', 'Joana'];
+// const novo = [...nomes] //spread operator - copia o array sem gerar vinculo de alteração do array original.
 
-// Contador infinito
+// novo.pop(); // trabalha no final do array.
+// const removido = novo.shift(); // trabalha no início do array // desloca todos os outros indices do array.
+// nomes.push('Matheus'); // Adciona elementos no final do array.
+// nomes.unshift('Pedro'); // Adciona elementos no começo do array // esse procedimento pode prejudicar a performance do programa.
 
-// function* contador() {
-//   let i = 0;
+// console.log(nomes, removido);
 
-//   while (true) {
-//     yield i;
-//     i++;
-//   }
-// }
+// console.log(nomes);
+// console.log(novo);
+// console.log(nomes.length); //tamanho a array.
 
-// const g2 = contador();
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
-// console.log(g2.next().value);
+// const nomes = ['Eduardo', 'Maria', 'Joana', 'Wallace', 'Rosana'];
+// const novo = nomes.slice(2, -1);
+// console.log(novo);
 
-//Gerador para delegar
+//Convertendo string em array
+// const nome = 'Cleverson Christian da Rocha';
+// const nomes = nome.split(' ');
+// console.log(nomes);
 
-// function* geradora3() {
-//   yield 0;
-//   yield 1;
-//   yield 2;
-// }
-
-// function* geradora4() {
-//   yield* geradora3();
-//   yield 3;
-//   yield 4;
-//   yield 5;
-// }
-
-// const g4 = geradora4();
-// for (let valor of g4) {
-//   console.log(valor);
-// }
-
-//Geradora com funções
-
-function* geradora5() {
-  yield function () {
-    console.log('Vim do y1');
-  };
-
-  // Não podemos utilizar RETURN porque ele "para o yield". 
-  // return function(){
-  //   console.log('Vim do return');
-  // };
-
-  // ...
-
-  yield function () {
-    console.log('Vim do y2');
-  };
-}
-
-const g5 = geradora5();
-const func1 = g5.next().value;
-const func2 = g5.next().value;
-func1();
-func2();
+const nomes = ['Cleverson', 'Christian', 'da', 'Rocha'];
+const nome = nomes.join(' ');
+console.log(nome);
